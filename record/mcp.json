@@ -68,13 +68,26 @@
             ],
             "env": {}
         },
-        "web-search": {
+        "mcp-serena": {
+            "command": "D:\\service\\my-tools\\env_hub\\serena\\.venv\\Scripts\\serena.exe",
+            "args": [
+                "start-mcp-server"
+            ]
+        },
+        "mcp-web-search": {
             "type": "stdio",
             "command": "C:\\Program Files\\nodejs\\node.exe",
             "args": [
                 "C:\\Users\\sayurinana\\AppData\\Roaming\\npm\\node_modules\\open-websearch\\build\\index.js"
             ],
-            "env": {}
+            "env": {
+                "MODE": "stdio",
+                "DEFAULT_SEARCH_ENGINE": "duckduckgo",
+                "ENABLE_CORS": "true",
+                "CORS_ORIGIN": "*",
+                "USE_PROXY": "true",
+                "PROXY_URL": "http://s15.huse-lab.s.net:10809"
+            }
         }
     }
 }
